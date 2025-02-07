@@ -1,0 +1,13 @@
+document.getElementById("send-button").addEventListener("click", sendMessage);
+
+function sendMessage() {
+    let messageInput = document.getElementById("message");
+    let chatBox = document.getElementById("chat-box");
+
+    if (messageInput.value.trim() !== "") {
+        let messageElement = document.createElement("p");
+        messageElement.textContent = messageInput.value;
+        chatBox.appendChild(messageElement);
+        messageInput.value = "";
+    }
+}
